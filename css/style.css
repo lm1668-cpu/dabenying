@@ -95,9 +95,6 @@ h1{margin-top:.25rem;font-size:2.25rem;font-weight:900;line-height:1.2;color:var
 .match-card--navy .f-note{color:var(--sand)}
 .card-actions{margin-top:1.25rem;display:flex;flex-direction:column;gap:.6rem}
 .match-card .small{margin-top:.9rem}
-.embed{margin-top:1rem;background:#fff;border-radius:.875rem;overflow:hidden;border:1px solid var(--line)}
-.embed iframe{display:block;width:100%;border:0}
-.embed-loading{padding:1rem;color:var(--muted);font-size:.875rem;text-align:center}
 .steps{margin-top:1.5rem;display:grid;gap:.75rem}
 .steps li{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1rem}
 .step-n{display:inline-flex;align-items:center;justify-content:center;width:2rem;height:2rem;border-radius:50%;background:var(--yellow);color:var(--navy-deep);font-weight:900;font-size:.875rem}

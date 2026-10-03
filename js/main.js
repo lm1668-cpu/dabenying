@@ -24,34 +24,12 @@
     if (f && f.view) el.href = f.view;
   });
 
-  /* 2. 內嵌 Google 表格（撳先載入，唔拖慢首頁） */
-  function openEmbed(kind, scroll) {
-    var btn = document.querySelector('[data-embed="' + kind + '"]');
-    var box = document.getElementById("embed-" + kind);
-    var f = C.forms && C.forms[kind];
-    if (!btn || !box || !f) return;
-    if (!box.firstChild) {
-      var ifr = document.createElement("iframe");
-      ifr.src = f.view + (f.view.indexOf("?") > -1 ? "&" : "?") + "embedded=true";
-      ifr.height = f.embedHeight || 2400;
-      ifr.loading = "lazy";
-      ifr.title = kind === "job" ? "搵工帖刊登表格" : "請人帖刊登表格";
-      ifr.textContent = "載入緊…";
-      box.appendChild(ifr);
-    }
-    var show = scroll ? true : box.hidden;
-    box.hidden = !show;
-    btn.setAttribute("aria-expanded", String(show));
-    btn.textContent = show ? "收埋表格" : (kind === "job" ? "喺呢度填搵工帖" : "喺呢度填請人帖");
-    if (scroll) document.getElementById("form-" + kind).scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-  document.querySelectorAll("[data-embed]").forEach(function (btn) {
-    btn.addEventListener("click", function () { openEmbed(btn.getAttribute("data-embed"), false); });
-  });
+  /* 2. 表格直接喺新分頁開（唔再內嵌，避免手機碌唔落） */
   document.querySelectorAll("[data-open-form]").forEach(function (a) {
     a.addEventListener("click", function (e) {
       e.preventDefault();
-      openEmbed(a.getAttribute("data-open-form"), true);
+      var el = document.getElementById("form-" + a.getAttribute("data-open-form"));
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", a.getAttribute("href"));
     });
   });
