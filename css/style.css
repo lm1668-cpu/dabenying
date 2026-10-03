@@ -207,3 +207,17 @@ h1{margin-top:.25rem;font-size:2.25rem;font-weight:900;line-height:1.2;color:var
 .doc a{color:var(--navy);font-weight:700;text-underline-offset:3px}
 .doc-back{display:inline-flex;margin-top:2rem}
 @media (max-width:420px){.nav a{padding:0 .4rem}}
+
+/* 搵工／請人兩個方格：並排時同高、各部分對齊（3/10/2026） */
+.match-card{display:flex;flex-direction:column}
+.match-card > *{flex-shrink:0}
+.match-card .card-note{flex-grow:1}
+@media (min-width:1024px){
+  .match-grid{align-items:stretch}
+  @supports (grid-template-rows:subgrid){
+    .match-grid{grid-template-rows:repeat(7,auto);row-gap:0}
+    .match-card{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0;align-content:start}
+    .match-card > .fields{align-self:start}
+    .match-card .card-note{align-self:stretch}
+  }
+}
