@@ -1,0 +1,5 @@
+# GitHub Pages (Jekyll) settings: files listed here are not published.
+exclude:
+  - README.md
+  - _preview
+  - _excluded

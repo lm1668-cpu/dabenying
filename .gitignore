@@ -1,0 +1,17 @@
+# Not for publishing (see README)
+_preview/
+_excluded/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Secrets / local dev
+.env
+.env.*
+*.pem
+*.key
+*.log
+node_modules/
