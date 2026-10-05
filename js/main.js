@@ -12,7 +12,7 @@
     if (typeof v === "string" && v) el.href = v;
   });
   function waUrl(kind) {
-    var num = C.whatsappNumber || "85255304100";
+    var num = C.whatsappNumber || "85261791102";
     var t = (C.whatsappText && C.whatsappText[kind]) || "";
     return "https://wa.me/" + num + (t ? "?text=" + encodeURIComponent(t) : "");
   }
