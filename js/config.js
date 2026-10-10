@@ -1,7 +1,7 @@
 /* 網站設定：字眼同連結 */
 window.SITE_CONFIG = {
   /* 私隱用途字眼 */
-  privacyPurpose: "資料只用嚟處理同刊登你自己提交嘅帖文",
+  privacyPurpose: "資料只用嚟做配對及大本營社群服務",
 
   /* Google 表格網址 */
   forms: {
