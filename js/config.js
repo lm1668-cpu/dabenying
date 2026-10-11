@@ -18,9 +18,9 @@ window.SITE_CONFIG = {
   /* WhatsApp 查詢（入群及刊登規則查詢） */
   whatsappNumber: "85261791102",
   whatsappText: {
-    job:     "你好，我想加入裝修師傅互助大本營 WhatsApp 社群／查詢點樣自己刊登搵工帖。",
-    hire:    "你好，我想加入裝修師傅互助大本營 WhatsApp 社群／查詢點樣自己刊登請人帖。",
-    general: "你好，我想查詢裝修師傅互助大本營。"
+    job:     "你好，我想加入香港裝修師傅大本營 WhatsApp 社群／查詢點樣自己刊登搵工帖。",
+    hire:    "你好，我想加入香港裝修師傅大本營 WhatsApp 社群／查詢點樣自己刊登請人帖。",
+    general: "你好，我想查詢香港裝修師傅大本營。"
   },
 
   /* 公開 WhatsApp 頻道 */
