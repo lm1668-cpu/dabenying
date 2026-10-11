@@ -64,9 +64,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700;900&display=swap">
   <link rel="preload" as="image" href="assets/thumbs/hero-800.jpg" imagesrcset="assets/thumbs/hero-800.jpg 800w, assets/brand/hero.jpg 1500w" imagesizes="(min-width: 1180px) 1120px, 100vw">
-  <link rel="stylesheet" href="css/style.css?v=20261005d">
+  <link rel="stylesheet" href="css/style.css?v=20261011board">
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/board.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#post">跳去刊登表格</a>
@@ -76,6 +77,7 @@
       <a href="#top" class="brand"><img src="assets/thumbs/mark-128.webp" alt="" width="40" height="40"><span>香港裝修師傅大本營</span></a>
       <nav class="nav" aria-label="主選單">
         <a href="#post">刊登</a>
+        <a href="#board">最新</a>
         <a href="#groups">工種</a>
         <a href="#zones">分區</a>
         <a href="#gallery">背景</a>
@@ -120,7 +122,7 @@
       <div class="sec-head">
         <p class="kicker">自行刊登</p>
         <h2>自己出帖搵工、請人，雙方直接聯絡</h2>
-        <p>師傅同判頭自行刊登搵工、請人資訊，雙方直接聯絡。大本營唔代人搵工、唔代人揀人、唔收費。帖文會照你寫嘅內容同你自己揀嘅聯絡方法，刊登喺大本營相關 WhatsApp 工種群組。</p>
+        <p>師傅同判頭自行刊登搵工、請人資訊，雙方直接聯絡。大本營唔代人搵工、唔代人揀人、唔收費。帖文會照你寫嘅內容同你自己揀嘅聯絡方法，刊登喺大本營相關 WhatsApp 工種群組，並喺本頁「最新請人／搵工」公開列出（只限【刊登】欄）。</p>
       </div>
 
       <div class="match-grid">
@@ -194,6 +196,22 @@
         <li><span class="step-n">3</span><p class="step-t">雙方直接聯絡</p><p class="muted">有興趣嘅人用帖文上嘅聯絡方法直接搵你，條件由雙方自己傾。你可以隨時要求落帖同刪除資料。</p></li>
       </ol>
       <p class="small muted form-note">管理員唔會私下轉交任何人嘅電話，亦唔會代任何一方搵工、揀人或者推薦人選。表格由 Google 表格提供，資料儲存喺 Google 伺服器（可能位於香港以外）。</p>
+    </section>
+
+
+    <section id="board" class="wrap section board-sec">
+      <div class="sec-head">
+        <p class="kicker">公開板</p>
+        <h2>最新請人／搵工</h2>
+        <p>以下只顯示填表人自行標「刊登」嘅內容同聯絡方法。<span data-cfg="privacyPurpose">資料只用嚟做配對及大本營社群服務</span>。帖文未經核實，請自行查證；大本營唔代人搵工、唔代人揀人、唔收費。</p>
+      </div>
+      <p id="board-status" class="board-status small muted" role="status" aria-live="polite"></p>
+      <div id="board-filters" class="filters board-filters" aria-label="篩選帖文"></div>
+      <ul id="board-list" class="board-list"></ul>
+      <div id="board-empty" class="board-empty" hidden>
+        <p class="muted">暫時未有公開帖文。你可以先<a class="link" href="#form-job">出搵工帖</a>或<a class="link" href="#form-hire">出請人帖</a>。</p>
+      </div>
+      <p class="small muted board-foot">想帖文出現喺呢度：用上面表格自行刊登（公開聯絡已係刊登欄）。落帖或刪除請 WhatsApp 管理員，並註明帖文內容。</p>
     </section>
 
     <section id="groups" class="wrap section">
@@ -273,7 +291,7 @@
         <div>
           <h2>刊登前請睇</h2>
           <ul>
-            <li><span data-cfg="privacyPurpose">資料只用嚟做配對及大本營社群服務</span>。帖文只會公開你自己填、自己揀公開嘅內容同聯絡方法；管理員唔會私下轉交任何人嘅電話。</li>
+            <li><span data-cfg="privacyPurpose">資料只用嚟做配對及大本營社群服務</span>。帖文只會公開你自己填、自己揀公開嘅內容同聯絡方法（包括 WhatsApp 工種群組同本頁公開板）；管理員唔會私下轉交任何人嘅電話。</li>
             <li>唔好喺帖文寫身份證號碼、證件相、客戶姓名或者工地詳細地址。</li>
             <li>帖文內容同證件資料由刊登者自行申報，大本營冇核實，請自行查證。</li>
             <li>如屬僱傭（包括散工），工資唔可以低於法定最低工資（1/5/2026 起每小時 $43.1），亦要遵守《僱傭條例》等法例；唔接受歧視性要求。</li>

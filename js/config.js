@@ -24,5 +24,20 @@ window.SITE_CONFIG = {
   },
 
   /* 公開 WhatsApp 頻道 */
-  channelUrl: "https://whatsapp.com/channel/0029Vb9TRu9HrDZgRprAdf1c"
+  channelUrl: "https://whatsapp.com/channel/0029Vb9TRu9HrDZgRprAdf1c",
+
+  /**
+   * 最新請人／搵工公開板（Form → Apps Script「公開板」→ doGet JSONP）
+   * Kelvin 批准部署 Web App（任何人）後，把兩條 /exec URL 填入 feeds；
+   * 未填時用 sample 本地預覽。唔好喺瀏覽器放 Sheet secret。
+   */
+  board: {
+    enabled: true,
+    feeds: {
+      find_job: "https://script.google.com/macros/s/AKfycby32uCXyRfr7iLTLqJ185pPpkpViuGOpSaRi3U9nSWgBUVWg1A4LrfylW_-abmRjCXcMA/exec",
+      hire: "https://script.google.com/macros/s/AKfycbzoq3tvW_3ilooCyhCk9gmdi1KZNRYZevVDVEZMGpX901ANHyMZid6f0Kt27iKh7EOpYQ/exec"
+    },
+    useSampleWhenEmpty: true,
+    sampleUrl: "assets/board/sample_feed.json"
+  }
 };
