@@ -63,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@400;500;700;900&display=swap">
-  <link rel="preload" as="image" href="assets/thumbs/hero-800.jpg" imagesrcset="assets/thumbs/hero-800.jpg 800w, assets/brand/hero.jpg 1500w" imagesizes="(min-width: 1180px) 1120px, 100vw">
+  <link rel="preload" as="image" type="image/webp" href="assets/thumbs/hero-800.webp" imagesrcset="assets/thumbs/hero-800.webp 800w, assets/brand/hero.webp 1920w" imagesizes="(min-width: 1180px) 1120px, 100vw">
   <link rel="stylesheet" href="css/style.css?v=20261011nogroups">
   <script src="js/config.js" defer></script>
   <script src="js/main.js" defer></script>
@@ -89,7 +89,10 @@
     <section class="hero">
       <div class="wrap">
         <figure class="hero-fig">
-          <img src="assets/thumbs/hero-800.jpg" srcset="assets/thumbs/hero-800.jpg 800w, assets/brand/hero.jpg 1500w" sizes="(min-width: 1180px) 1120px, 100vw" alt="香港裝修師傅大本營橫幅插圖（AI 生成）" width="1500" height="844" fetchpriority="high">
+          <picture>
+            <source type="image/webp" srcset="assets/thumbs/hero-800.webp 800w, assets/brand/hero.webp 1920w" sizes="(min-width: 1180px) 1120px, 100vw">
+            <img src="assets/thumbs/hero-800.jpg" srcset="assets/thumbs/hero-800.jpg 800w, assets/brand/hero.jpg 1920w" sizes="(min-width: 1180px) 1120px, 100vw" alt="香港裝修師傅大本營橫幅插圖（AI 生成）" width="1920" height="1080" fetchpriority="high">
+          </picture>
         </figure>
         <p class="hero-tag">獅子山精神 · 吃得苦，敢擔當</p>
         <p class="ai-note ai-note--dark">（圖片由 AI 生成，僅作示意）</p>
