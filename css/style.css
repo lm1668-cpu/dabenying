@@ -28,7 +28,6 @@ article[id]{scroll-margin-top:4.5rem}
 .header-row{display:flex;align-items:center;gap:.75rem;padding-top:.5rem;padding-bottom:.5rem}
 .brand{display:flex;align-items:center;gap:.5rem;min-height:2.75rem;text-decoration:none;flex-shrink:0}
 .brand img{width:2.5rem;height:2.5rem;border-radius:50%;object-fit:cover}
-.brand span{max-width:9.5rem;font-size:.75rem;font-weight:900;line-height:1.25;letter-spacing:.02em;color:var(--navy)}
 .nav{min-width:0;margin-left:auto;display:flex;gap:.125rem;overflow-x:auto;scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
 .nav a{display:inline-flex;align-items:center;min-height:2.75rem;padding:0 .6rem;font-size:.875rem;font-weight:700;color:var(--navy);text-decoration:none;white-space:nowrap;border-radius:.5rem}
@@ -198,7 +197,11 @@ h1{margin-top:.25rem;font-size:2.25rem;font-weight:900;line-height:1.2;color:var
 .doc .box{margin-top:1.25rem;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.25rem}
 .doc a{color:var(--navy);font-weight:700;text-underline-offset:3px}
 .doc-back{display:inline-flex;margin-top:2rem}
-@media (max-width:420px){.nav a{padding:0 .4rem}}
+@media (max-width:420px){
+  .header-row{gap:.35rem}
+  .nav{gap:0}
+  .nav a{padding:0 .35rem;font-size:.8125rem}
+}
 
 /* 搵工／請人兩個方格：並排時同高、各部分對齊（3/10/2026） */
 .match-card{display:flex;flex-direction:column}
@@ -213,8 +216,6 @@ h1{margin-top:.25rem;font-size:2.25rem;font-weight:900;line-height:1.2;color:var
     .match-card .card-note{align-self:stretch}
   }
 }
-
-@media (min-width:640px){.brand span{max-width:none;font-size:.875rem}}
 
 /* 最新請人／搵工公開板（2026-10-11） */
 .board-sec{padding-top:2rem}
