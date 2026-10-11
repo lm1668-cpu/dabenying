@@ -16,7 +16,7 @@ window.SITE_CONFIG = {
   },
 
   /* 大本營主社群邀請（想加入社群 CTA；已批 CH4／CH6／FB7） */
-  communityInviteUrl: "https://chat.whatsapp.com/LnsoTrqgQyxF3Uh8mT8bo4",
+  communityInviteUrl: "https://chat.whatsapp.com/I1Gz6NcOAyu3p8Qhfw7bXB",
 
   /* WhatsApp 管理員查詢（刊登規則及其他；非入群 CTA） */
   whatsappNumber: "85261791102",
