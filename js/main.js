@@ -34,20 +34,7 @@
     });
   });
 
-  /* 3. 工種分類篩選 */
-  var chips = document.querySelectorAll("[data-filter]");
-  var items = document.querySelectorAll("#trade-grid li");
-  chips.forEach(function (chip) {
-    chip.addEventListener("click", function () {
-      var lane = chip.getAttribute("data-filter");
-      chips.forEach(function (c) { c.setAttribute("aria-pressed", String(c === chip)); });
-      items.forEach(function (li) {
-        li.hidden = !(lane === "all" || li.getAttribute("data-lane") === lane);
-      });
-    });
-  });
-
-  /* 4. 睇大圖 */
+  /* 3. 睇大圖 */
   var dlg = document.getElementById("lightbox");
   if (dlg && typeof dlg.showModal === "function") {
     var img = document.getElementById("lb-img");
