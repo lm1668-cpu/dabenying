@@ -15,11 +15,14 @@ window.SITE_CONFIG = {
     }
   },
 
-  /* WhatsApp 查詢（入群及刊登規則查詢） */
+  /* 大本營主社群邀請（想加入社群 CTA；已批 CH4／CH6／FB7） */
+  communityInviteUrl: "https://chat.whatsapp.com/LnsoTrqgQyxF3Uh8mT8bo4",
+
+  /* WhatsApp 管理員查詢（刊登規則及其他；非入群 CTA） */
   whatsappNumber: "85261791102",
   whatsappText: {
-    job:     "你好，我想加入香港裝修師傅大本營 WhatsApp 社群／查詢點樣自己刊登搵工帖。",
-    hire:    "你好，我想加入香港裝修師傅大本營 WhatsApp 社群／查詢點樣自己刊登請人帖。",
+    job:     "你好，我想查詢點樣自己刊登搵工帖。",
+    hire:    "你好，我想查詢點樣自己刊登請人帖。",
     general: "你好，我想查詢香港裝修師傅大本營。"
   },
 

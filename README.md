@@ -26,4 +26,4 @@ cd /tmp/ghp && python3 -m http.server 8000
 ## 注意
 - 唔好加 `.nojekyll`：GitHub Pages 要經 Jekyll 先會跟 `_config.yml` 排除 README.md，並略過 `_` 開頭嘅資料夾。
 - 頁面上「表格會問咩？」清單要同 Google 表格欄位一致；改表格就要同步改 index.html 同 privacy.html。
-- 唔好放任何 WhatsApp 群組／社群邀請連結。
+- 想加入社群 CTA 用 `communityInviteUrl`（主社群邀請）；社群分區用各分區邀請連結。管理員查詢（刊登規則／頁腳）仍用 `whatsappNumber`，唔好改做邀請連結。
