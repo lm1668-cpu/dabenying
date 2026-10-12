@@ -164,7 +164,7 @@
           : "") +
         (bodyBits.length ? "<div class=\"board-dl\">" + bodyBits.join("") + "</div>" : "") +
         "<p class=\"board-contact\"><span class=\"board-contact-label\">聯絡</span> " +
-          esc(p.contact || f["公開聯絡方法【刊登】"] || "（無）") + "</p>";
+          esc(p.contact || f["公開聯絡方法【刊登】"] || "聯絡方法未提供") + "</p>";
       listEl.appendChild(li);
     });
   }
@@ -218,6 +218,10 @@
   function load() {
     if (C.enabled === false) {
       setStatus("公開板暫時關閉。");
+      if (filtersEl) {
+        filtersEl.innerHTML = "";
+        filtersEl.hidden = true;
+      }
       if (emptyEl) emptyEl.hidden = false;
       return;
     }
@@ -241,7 +245,11 @@
             if (emptyEl) emptyEl.hidden = false;
           });
       } else {
-        setStatus("尚未設定公開板 feed。請先自行刊登。");
+        setStatus("暫時未有公開帖文——歡迎你率先出帖。");
+        if (filtersEl) {
+          filtersEl.innerHTML = "";
+          filtersEl.hidden = true;
+        }
         if (emptyEl) emptyEl.hidden = false;
       }
       return;
@@ -258,12 +266,16 @@
     Promise.all(jobs).then(function (results) {
       allPosts = mergeFeeds(results);
       if (!allPosts.length) {
-        setStatus("暫時未有公開帖文，或者 feed 尚未有資料。");
+        setStatus("");
+        if (filtersEl) {
+          filtersEl.innerHTML = "";
+          filtersEl.hidden = true;
+        }
         if (emptyEl) emptyEl.hidden = false;
-        renderFilters();
         renderList();
         return;
       }
+      if (filtersEl) filtersEl.hidden = false;
       setStatus("共 " + allPosts.length + " 則（只顯示標【刊登】嘅公開欄位）");
       renderFilters();
       renderList();
